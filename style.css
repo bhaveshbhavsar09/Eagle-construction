@@ -53,6 +53,18 @@ img {
     width: 100%;
     display: block;
     object-fit: cover;
+    animation: imageEntrance 0.9s ease;
+    transform-origin: center;
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.08) saturate(1.12);
+    box-shadow: 0 14px 28px rgba(12, 35, 64, 0.18);
 }
 
 a {
@@ -437,6 +449,18 @@ ul {
 
     50% {
         transform: translateY(5px);
+    }
+}
+
+@keyframes imageEntrance {
+    from {
+        opacity: 0.7;
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -1491,6 +1515,23 @@ ul {
     transform: translateX(0);
 }
 
+.image-reveal img {
+    opacity: 0;
+    transform: scale(1.08);
+    transition:
+        opacity 0.7s ease,
+        transform 1s ease;
+}
+
+.image-reveal.visible img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.image-reveal:hover img {
+    transform: scale(1.04);
+}
+
 @media (prefers-reduced-motion: reduce) {
 
     .reveal,
@@ -1498,6 +1539,24 @@ ul {
     .image-reveal.image-from-right {
         transform: none;
         transition: opacity 0.3s ease;
+    }
+
+    .image-reveal img,
+    .image-reveal.visible img,
+    .image-reveal:hover img {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    img {
+        animation: none;
+    }
+
+    img:hover {
+        transform: none;
+        filter: none;
+        box-shadow: none;
     }
 
 }
