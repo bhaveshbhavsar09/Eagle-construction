@@ -1510,7 +1510,7 @@ ul {
 @media (max-width: 1000px) {
 
     .navbar {
-        gap: 18px;
+        gap: 16px;
     }
 
     .about-grid,
@@ -1540,22 +1540,24 @@ ul {
 @media (max-width: 800px) {
 
     .nav-container {
-        min-height: 100px;
+        min-height: 88px;
     }
 
     .logo-image {
-        width: 76px;
-        height: 76px;
+        width: 64px;
+        height: 64px;
     }
 
     .menu-toggle {
         display: block;
+
+        color: var(--white);
     }
 
     .navbar {
         position: absolute;
 
-        top: 100px;
+        top: 88px;
         left: 0;
 
         width: 100%;
@@ -1587,6 +1589,15 @@ ul {
 
     .hero h1 {
         font-size: 55px;
+    }
+
+    .hero-text {
+        padding-top: 55px;
+    }
+
+    .image-reveal.image-from-left,
+    .image-reveal.image-from-right {
+        transform: none;
     }
 
     .stats-grid {
@@ -1646,8 +1657,20 @@ ul {
         font-size: 45px;
     }
 
+    .hero-text {
+        padding-top: 35px;
+    }
+
     .hero p {
         font-size: 16px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
     }
 
     .hero-scroll {
@@ -1693,6 +1716,12 @@ ul {
         font-size: 42px;
     }
 
+    .quote-card {
+        right: 15px;
+        left: 15px;
+        width: auto;
+    }
+
     .about-features {
         grid-template-columns: 1fr;
     }
@@ -1735,6 +1764,14 @@ ul {
 
     .contact-form-wrapper {
         padding: 25px 18px;
+    }
+
+    .cta-inner {
+        text-align: center;
+    }
+
+    .cta .btn {
+        width: 100%;
     }
 
     .form-row {
