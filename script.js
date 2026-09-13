@@ -240,6 +240,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const formMessage =
         document.getElementById("formMessage");
 
+    const serviceSelect =
+        document.getElementById("service");
+
+    document.querySelectorAll(".service-card a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            serviceSelect.value =
+                link.getAttribute("data-service") || "";
+
+        });
+
+    });
+
     contactForm.addEventListener("submit", event => {
 
         event.preventDefault();
