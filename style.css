@@ -109,7 +109,7 @@ ul {
 
 
 .nav-container {
-    min-height: 96px;
+    min-height: 126px;
 
     display: flex;
     align-items: center;
@@ -128,8 +128,8 @@ ul {
 }
 
 .logo-image {
-    width: 58px;
-    height: 58px;
+    width: 88px;
+    height: 88px;
 
     padding: 0;
 
@@ -1517,7 +1517,12 @@ ul {
 @media (max-width: 800px) {
 
     .nav-container {
-        min-height: 78px;
+        min-height: 100px;
+    }
+
+    .logo-image {
+        width: 76px;
+        height: 76px;
     }
 
     .menu-toggle {
@@ -1527,7 +1532,7 @@ ul {
     .navbar {
         position: absolute;
 
-        top: 78px;
+        top: 100px;
         left: 0;
 
         width: 100%;
