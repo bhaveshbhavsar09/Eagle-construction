@@ -1479,6 +1479,29 @@ ul {
     transform: translateY(0);
 }
 
+.image-reveal.image-from-left {
+    transform: translateX(-70px);
+}
+
+.image-reveal.image-from-right {
+    transform: translateX(70px);
+}
+
+.image-reveal.visible {
+    transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .reveal,
+    .image-reveal.image-from-left,
+    .image-reveal.image-from-right {
+        transform: none;
+        transition: opacity 0.3s ease;
+    }
+
+}
+
 
 /* =========================================
    RESPONSIVE
