@@ -44,7 +44,7 @@ html {
 body {
     font-family: var(--font-main);
     color: var(--text);
-    background: var(--white);
+    background: rgba(17, 17, 17, 0.96);
     line-height: 1.7;
     overflow-x: hidden;
 }
@@ -97,7 +97,7 @@ ul {
     width: 100%;
     z-index: 1000;
 
-    background: rgba(17, 17, 17, 0.92);
+    background: var(--dark);
     backdrop-filter: blur(15px);
 
     transition: var(--transition);
@@ -131,10 +131,9 @@ ul {
     width: 43px;
     height: 43px;
 
-    padding: 3px;
+    padding: 0;
 
-    background: var(--dark);
-    border: 1px solid var(--primary);
+    background: transparent;
     object-fit: contain;
 }
 
@@ -209,7 +208,7 @@ ul {
 
     background: var(--primary);
 
-    color: var(--dark);
+    color: var(--white);
 
     font-size: 13px;
     font-weight: 700;
@@ -228,7 +227,7 @@ ul {
     border: none;
     background: transparent;
 
-    color: var(--white);
+    color: var(--dark);
 
     font-size: 23px;
 }
